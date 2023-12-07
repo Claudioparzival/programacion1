@@ -1,0 +1,33 @@
+#include <iostream>
+
+struct entrar{
+        std::string usuario; 
+        int c;
+    };
+
+int main(){
+    
+    entrar login;
+    login.usuario="claudio";
+    login.c=12345678;
+    
+    
+    std::cout<<"ingrese su usuario"<<std::endl;    
+    std::cin>>login.usuario;
+    
+    if(login.usuario == "claudio"){
+        std::cout<<"ingrese contraseña"<<std::endl;
+        std::cin>>login.c;
+        
+       if( login.c != 12345678 )                 
+    {
+        std::cout<<"la contraseña es incorrecta"<<std::endl;
+    }else
+    {
+        std::cout<<"la contraseña es correcta"<<std::endl;
+    }
+    }else{
+        std::cout<<"usuario no detectado"<<std::endl;
+    }
+    
+}
