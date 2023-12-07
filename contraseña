@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<iostream>
+
+
+
+int main()
+{
+    std::string c;
+    
+    std::cout<<"ingrese su contraseña"<<std::endl;   
+    std::cin>>c;
+    
+    if( c =="uniatgdl" )
+    {
+        std::cout<<"la contraseña es correcta"<<std::endl;
+    }
+    else
+    {
+        std::cout<<"la contraseña es incorrecta"<<std::endl;
+    }
+    
+
+    return 0;
+}
