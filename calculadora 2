@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int main(){
+    
+    int num2, num3, resultado, operacion, salir; 
+    char num1;      //poner variables char funciona para %c
+    
+    
+    
+    int a;
+    
+    do{
+    printf("Ingese una opcion\n \n + suma \n -resta \n *multiplicacion \n /division \n");
+    scanf("%c" ,&num1);   //escanear un simbolo de suma
+    
+    
+    switch(num1){  //para que imprima donde debe depende los casos 
+        
+        case ('+'):{   // el case funciona para difernciar los casos
+            printf("ingrese un numero \n");
+            scanf("%d" ,&num2);
+            
+            printf("ingrese el numero que se suma \n");   
+            scanf("%d" ,&num3);
+            
+            printf("resultado %d" ,num2+num3);     // imprima el resulltado dela suma o de la opereacion deseada
+            
+            break;   //parar el proceso es imprtante de spues pone } para cerrar
+        }
+        
+        case('-'):{
+            
+            printf("ingrese un numero \n");
+            scanf("%d" ,&num2);
+            
+            printf("ingrese el numero que se resta \n");
+            scanf("%d" ,&num3);
+            
+            printf("resultado %d" ,num2-num3);
+            
+            break; 
+        }
+        
+        case ('*'):{
+            
+             printf("ingrese un numero \n");
+            scanf("%d" ,&num2);
+            
+            printf("ingrese el numero que se multiplica \n");
+            scanf("%d" ,&num3);
+            
+            printf("resultado %d" ,num2*num3);
+            
+            break;
+        }
+        case ('/'):{
+            
+            printf("ingrese un numero \n");
+            scanf("%d" ,&num2);
+            
+            printf("ingrese el numero que se divide\n");
+            scanf("%d" ,&num3);
+            
+            printf("resultado %d" ,num2/num3);
+            
+            break;
+        }
+        printf("\n \n ponga salir para salir \n ponga 0 para volver a empezar \n");
+        scanf("%d" ,&salir);
+     
+     
+        while(salir==0)};
+    }    return 0;
+}    
+
+
+}
