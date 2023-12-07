@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<iostream>
+
+
+
+int main()
+{
+    std::string c;
+    do{               // do hace un ciclo
+    std::cout<<"ingrese su contraseña"<<std::endl;    
+    std::cin>>c;
+        
+        if(c == "q"){                             //para cerrar el programa con una tecla
+            std::cout<<"Saliendo"<<std::endl;
+            break;
+        }else{
+        
+        if(c.size()>8)      //determina el tamaño de la variable para ver que este no sea mas largo
+        {
+            std::cout<<"la contraseña es muy larga"<<std::endl;  
+        }else{
+      
+      if(c.size()<8)
+      {
+          std::cout<<"lacontraseña esta muy pequeña"<<std::endl;
+          
+      }else{
+       
+     
+        
+    if( c != "12345678" )                 
+    {
+        std::cout<<"la contraseña es incorrecta vuelva a intentarlo"<<std::endl;
+    }else
+    {
+        std::cout<<"la contraseña es correcta"<<std::endl;
+    }
+        }
+        }
+        }
+    }while( c !="12345678");    // cierra el ciclo do
+    
+    
+    return 0;
+}
