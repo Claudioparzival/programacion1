@@ -1,11 +1,6 @@
-//
-// Created by Alumnos on 30/11/2023.
-//
-
 #ifndef PROGRAMACION1_LIBRERIA_H
 #define PROGRAMACION1_LIBRERIA_H
 #include <iostream>
-
 
 class asegurado {
 
@@ -13,23 +8,23 @@ public:
 
     asegurado() {
 
-        std::cout << "Ingrese su nombre" << endl;
+        std::cout << "Ingrese su nombre" << std::endl;
         std::cin >> nombre;
 
-        std::cout << "Ingrese su fecha de nacimiento" << endl;
+        std::cout << "Ingrese su fecha de nacimiento" << std::endl;
         std::cin >> fechaNacimiento;
 
-        std::cout << "Ingrese su curp" << endl;
+        std::cout << "Ingrese su curp" << std::endl;
         std::cin >> curp;
 
-        std::cout << "Ingrese sus enfermedades" << endl;
+        std::cout << "Ingrese sus enfermedades" << std::endl;
         std::cin >> enfermedades;
 
-        std::cout << "Ingrese presio del seguro" << endl;
-        std::cin << presio;
+        std::cout << "Ingrese presio del seguro" << std::endl;
+        std::cin >> presio;
 
-        std::cout << "Ingrese su ID" << endl;
-        std::cin << ID;
+        std::cout << "Ingrese su ID" << std::endl;
+        std::cin >> ID;
 
 
         this->nombre = nombre;
@@ -41,9 +36,7 @@ public:
 
     };
 
-    void cambiarNombre(std::nombreNuevo){
-        this->nombre=nombreNuevo;
-    }
+
 
 
 private:
@@ -54,6 +47,7 @@ private:
     std::string enfermedades;
     std::string presio;
     std::string ID;
+    std::string nombreNuevo;
 
 };
 
@@ -63,14 +57,19 @@ public:
 
     PolizaCasa(){
 
-        std::cout << "Ingrese su dirreccion" << endl;
+        std::cout << "Ingrese su dirreccion" << std::endl;
         std::cin >> dirreccion;
 
-        std::cout << "Ingrese el tamaño de su casa" << endl;
+        std::cout << "Ingrese el tamaño de su casa" << std::endl;
         std::cin >> TamanoCasa;
 
-        std::cout << "Ingrese el año de construccion" << endl;
+        std::cout << "Ingrese el año de construccion" << std::endl;
         std::cin >> AnoConstruccion;
+
+
+        this-> dirreccion = dirreccion;
+        this->TamanoCasa = TamanoCasa;
+        this->AnoConstruccion = AnoConstruccion;
 
     }
 
@@ -87,16 +86,25 @@ public:
 
     PolizaVida(){
 
-        std::cout << "Ingrese la enfermedada que usted padece, en el caso de no tener una dejele vacia " << endl;
+        std::cout << "Ingrese la enfermedada que usted padece, en el caso de no tener una dejele vacia " << std::endl;
         std::cin >> enfermedad;
 
-        std::cout << "Ingrese su Tipo de sangre" << endl;
+        std::cout << "Ingrese su Tipo de sangre" << std::endl;
         std::cin >> TipoSangre;
 
-        std::cout << "Ingrese el año de construccion" << endl;
-        std::cin >> AnoConstruccion;
+
+
+        this-> enfermedad = enfermedad;
+        this->TipoSangre = TipoSangre;
+
+
 
     }
+
+private:
+
+    std::string enfermedad;
+    std::string TipoSangre;
 };
 
 class PolizaCoche{
@@ -105,26 +113,34 @@ public:
 
     PolizaCoche(){
 
-        std::cout << "Ingrese el año del coche" << endl;
+        std::cout << "Ingrese el año del coche" << std::endl;
         std::cin >> AnoCoche;
 
-        std::cout << "Ingrese El kilometraje" << endl;
+        std::cout << "Ingrese El kilometraje" << std::endl;
         std::cin >> kilometraje;
 
-        std::cout << "Ingrese el modelo" << endl;
+        std::cout << "Ingrese el modelo" << std::endl;
         std::cin >> modelo;
 
-        std::cout << "Ingrese el marca" << endl;
+        std::cout << "Ingrese el marca" << std::endl;
         std::cin >> marca;
 
-        std::cout << "Ingrese el numero de serie" << endl;
+        std::cout << "Ingrese el numero de serie" << std::endl;
         std::cin >> NumeroSerie;
 
-        std::cout << "Ingrese la placa" << endl;
+        std::cout << "Ingrese la placa" << std::endl;
         std::cin >> placa;
 
-        std::cout << "Ingrese el color" << endl;
+        std::cout << "Ingrese el color" << std::endl;
         std::cin >> color;
+
+
+        this->AnoCoche = AnoCoche;
+        this->kilometraje = kilometraje;
+        this->modelo = modelo;
+        this->NumeroSerie = NumeroSerie;
+        this->placa = placa;
+        this->color = color;
 
     }
 
@@ -139,47 +155,54 @@ private:
     std::string color;
 
 };
-Class menu(){
 
-    public:
+class menu{
+
+public:
 
     menu(){
 
-        asegurados();
+        char opcion;
+
+        asegurado();
 
         std::cout << "Eliga una opcion" << std::endl;
         std::cout << "1. Seguro de Vida" << std::endl;
-        std::cout << "2. Segur de Casa" << std::endl;
+        std::cout << "2. Seguro de Casa" << std::endl;
         std::cout << "3. Seguro de Coche" << std::endl;
-        std::cin >> a;
+        std::cin >> opcion;
 
-        if(a=1){
-            PolizaVida();
+
+
+        switch(opcion){
+
+            case '1':
+
+                PolizaVida();
+
+                break;
+
+            case '2':
+
+                PolizaCasa();
+
+                break;
+
+            case '3':
+
+                PolizaCoche();
+
+                break;
+
         }
 
-        if(a=2){
-            PolizaCasa();
-        }
-
-        if(a=3){
-            PolizaCoche();
-        }
-
-        if(a=q){
-            return 0;
-        }
 
 
     }
-}
-
-
-
+};
 
 
 #endif //PROGRAMACION1_LIBRERIA_H
-
-
 
 
 
